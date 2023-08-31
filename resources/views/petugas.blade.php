@@ -28,7 +28,7 @@
         <br>
         <textarea name="alamat" id="alamat"></textarea>
         <br><br>
-        <input type="submit" value="Simpan">
+        <input type="submit" value="Next">
     </form>
 </body>
 </html>
