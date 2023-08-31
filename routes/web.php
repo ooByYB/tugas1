@@ -14,11 +14,12 @@ use App\Http\Controllers\PerpustakaanController;
 |
 */
 
+Route::get('/', [PerpustakaanController::class, 'welcome'])->name('get_welcome');
 
-Route::get('/', [PerpustakaanController::class, 'anggota']);
+Route::get('/anggota', [PerpustakaanController::class, 'anggota'])->name('get_anggota');
 
-Route::get('/buku', [PerpustakaanController::class, 'buku']);
+Route::get('/buku', [PerpustakaanController::class, 'buku'])->name('get_buku');
 
-Route::get('/petugas', [PerpustakaanController::class, 'petugas']);
+Route::get('/petugas', [PerpustakaanController::class, 'petugas'])->name('get_petugas');
 
 

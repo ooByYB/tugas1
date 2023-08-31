@@ -6,7 +6,7 @@
     <title>Buku</title>
 </head>
 <body>
-    <h1>Imput buku</h1>
+    <h1>Imput Buku</h1>
     <form action="">
         <label for="id_buku">ID Buku</label>
         <br>
@@ -36,7 +36,7 @@
         <br>
         <input type="number" name="stok" id="stok">
         <br><br>
-        <input type="submit" value="Next">
+        <input type="submit" value="Kirim">
     </form>
 </body>
 </html>

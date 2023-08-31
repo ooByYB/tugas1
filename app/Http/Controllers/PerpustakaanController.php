@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PerpustakaanController extends Controller
 {
+
+    public function welcome(){
+        return view('welcome');
+    }
+
     public function anggota(){
         return view('anggota');
     }
