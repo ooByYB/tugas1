@@ -6,8 +6,8 @@
     <title>Buku</title>
 </head>
 <body>
-    <h1>Imput Buku</h1>
-    <form action="">
+    <h1>Input Buku</h1>
+    <form action="{{ route('get_welcome') }}">
         <label for="id_buku">ID Buku</label>
         <br>
         <input type="text" name="id_buku" id="id_buku">

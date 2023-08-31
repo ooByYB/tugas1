@@ -23,3 +23,4 @@ Route::get('/buku', [PerpustakaanController::class, 'buku'])->name('get_buku');
 Route::get('/petugas', [PerpustakaanController::class, 'petugas'])->name('get_petugas');
 
 
+
