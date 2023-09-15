@@ -66,7 +66,7 @@
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="{{ route('get_tabel') }}" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/tabel" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -81,7 +81,7 @@
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="{{ route('get_tabel') }}" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/tabel" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
