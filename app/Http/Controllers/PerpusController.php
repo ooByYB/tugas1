@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class AnggotaController extends Controller
+class PerpusController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $anggota = DB::table('anggota')->get();
+        $petugas = DB::table('petugas')->get();
+        $buku = DB::table('buku')->get();
+        return view('king.tabel', compact('buku', 'petugas', 'anggota'));
     }
 
     /**
@@ -20,7 +23,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('king.member.create');
+        return view('king.table');
     }
 
     /**
@@ -28,27 +31,7 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'id' => 'required',
-            'kode' => 'required',
-            'nama' => 'required',
-            'jk' => 'required',
-            'jurusan' => 'required',
-            'tlp' => 'required',
-            'alamat' => 'required',
-        ]);
-
-        $query = DB::table('anggota')->insert([
-            'id' => $request['id'],
-            'kode' => $request['kode'],
-            'nama' => $request['nama'],
-            'jk' => $request['jk'],
-            'jurusan' => $request['jurusan'],
-            'tlp' => $request['tlp'],
-            'alamat' => $request['alamat'],
-        ]);
-
-        return redirect('/tabel');
+        //
     }
 
     /**

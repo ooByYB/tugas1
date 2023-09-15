@@ -8,7 +8,7 @@
             <a href="{{ route('welcome') }}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('get_tabel') }}" class="nav-link">Peminjaman</a>
+            <a href="/tabel" class="nav-link">Data Perpustakaan</a>
         </li>
     </ul>
 

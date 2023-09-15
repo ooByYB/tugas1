@@ -36,7 +36,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('get_anggota') }}" class="nav-link">
+                    <a href="/anggota/create" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Form Anggota
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('get_buku') }}" class="nav-link">
+                    <a href="/buku/create" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Form Buku
@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('get_petugas') }}" class="nav-link">
+                    <a href="/petugas/create" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Form Petugas

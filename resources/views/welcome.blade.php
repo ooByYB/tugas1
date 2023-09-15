@@ -36,7 +36,7 @@
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="{{ route('get_anggota') }}" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/anggota/create" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -51,7 +51,7 @@
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{{ route('get_buku') }}" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/buku" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

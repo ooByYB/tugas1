@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PetugasController extends Controller
 {
@@ -10,7 +11,7 @@ class PetugasController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {  
         //
     }
 
@@ -19,7 +20,7 @@ class PetugasController extends Controller
      */
     public function create()
     {
-        return view('king.form.petugas');
+        return view('king.officer.create');
     }
 
     /**
@@ -27,7 +28,25 @@ class PetugasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'id' => 'required',
+            'nama_petugas' => 'required',
+            'jabatan_petugas' => 'required',
+            'tlp_petugas' => 'required',
+            'alamat_petugas' => 'required',
+
+        ]);
+
+        $query = DB::table('petugas')->insert([
+            'id' => $request['id'],
+            'nama_petugas' => $request['nama_petugas'],
+            'jabatan_petugas' => $request['jabatan_petugas'],
+            'tlp_petugas' => $request['tlp_petugas'],
+            'alamat_petugas' => $request['alamat_petugas'],
+
+        ]);
+
+        return redirect('/tabel');
     }
 
     /**
