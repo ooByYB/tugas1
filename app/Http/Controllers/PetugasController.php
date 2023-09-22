@@ -54,7 +54,8 @@ class PetugasController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $petugas = DB::table('petugas')->where('id', $id)->get();
+        return view('king.officer.show', compact('petugas'));
     }
 
     /**
@@ -62,7 +63,8 @@ class PetugasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $petugas = DB::table('petugas')->where('id', $id)->get();
+        return view('king.officer.edit', compact('petugas'));
     }
 
     /**
@@ -70,7 +72,23 @@ class PetugasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'id' => 'required|numeric',
+            'nama_petugas' => 'required|unique:petugas,nama_petugas',
+            'jabatan_petugas' => 'required',
+            'tlp_petugas' => 'required|numeric|min:11|max:12',
+            'alamat_petugas' => 'required|min:10|max:200',
+        ]);
+
+        $query = DB::table('petugas')->where('id', $id)->update([
+            'id' => $request['id'],
+            'nama_petugas' => $request['nama_petugas'],
+            'jabatan_petugas' => $request['jabatan_petugas'],
+            'tlp_petugas' => $request['tlp_petugas'],
+            'alamat_petugas' => $request['alamat_petugas'],
+        ]);
+
+        return redirect()->route('tabel.index');
     }
 
     /**
@@ -78,6 +96,7 @@ class PetugasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $query = DB::table('petugas')->where('id', $id)->delete();
+            return redirect()->route('tabel.index');
     }
 }

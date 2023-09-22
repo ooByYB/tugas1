@@ -51,7 +51,7 @@
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="/buku" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/buku/create" class="small-box-footer">Info lainnya <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

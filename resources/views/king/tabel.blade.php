@@ -37,7 +37,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Data Inputan</li>
+                        <li class="breadcrumb-item active">Data Perpustakaan</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -75,9 +75,13 @@
                                     <td>{{ $value->tahun_terbit }}</td>
                                     <td>{{ $value->stok }}</td>
                                     <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
+                                        <form action="{{ route('buku.destroy', $value->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                            <a href="{{ route('buku.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                            <a href="{{ route('buku.edit', $value->id)}}" class="btn-sm btn-warning">Edit</a>
+                                            <button type="submit" class="btn-sm btn-danger">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @empty
@@ -88,6 +92,52 @@
                             </tbody>
                         </table>
                         </br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Anggota</h3>
+                        </div>
+                        <table class="table table-head-fixed text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Kode</th>
+                                    <th>Nama</th>
+                                    <th>Kelamin</th>
+                                    <th>Jurusan</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($anggota as $key => $value)
+                                <tr>
+                                    <td>{{ $value->kode }}</td>
+                                    <td>{{ $value->nama }}</td>
+                                    <td>{{ $value->jk }}</td>
+                                    <td>{{ $value->jurusan }}</td>
+                                    <td>
+                                        <form action="{{ route('anggota.destroy', $value->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                            <a href="{{ route('anggota.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                            <a href="{{ route('anggota.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                            <button type="submit" class="btn-sm btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                @empty
+                                <tr>
+                                    <td>Data Masih Kosong</td>
+                                </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -118,9 +168,13 @@
                                         <td>{{ $value->tlp_petugas }}</td>
 
                                         <td>
-                                            <a href="" class="btn-sm btn-info">Show</a>
-                                            <a href="" class="btn-sm btn-warning">Edit</a>
-                                            <a href="" class="btn-sm btn-danger">Delete</a>
+                                            <form action="{{ route('petugas.destroy', $value->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                                <a href="{{ route('petugas.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                                <a href="{{ route('petugas.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                                <button type="submit" class="btn-sm btn-danger">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
 
@@ -131,48 +185,9 @@
                                     @endforelse
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Data Anggota</h3>
+                        <div class="card-footer">
+                            <input type="button" class="btn btn-danger" value="Kembali" onclick="history.back()">
                         </div>
-                        <table class="table table-head-fixed text-nowrap">
-                            <thead>
-                                <tr>
-                                    <th>Kode</th>
-                                    <th>Nama</th>
-                                    <th>Kelamin</th>
-                                    <th>Jurusan</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($anggota as $key => $value)
-                                <tr>
-                                    <td>{{ $value->kode }}</td>
-                                    <td>{{ $value->nama }}</td>
-                                    <td>{{ $value->jk }}</td>
-                                    <td>{{ $value->jurusan }}</td>
-                                    <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-
-                                @empty
-                                <tr>
-                                    <td>Data Masih Kosong</td>
-                                </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>

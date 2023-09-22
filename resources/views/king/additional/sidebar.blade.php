@@ -36,18 +36,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/anggota/create" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                    <a href="/tabel" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Form Anggota
+                            Data Perpustakaan
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="/buku/create" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Form Buku
+                            
                         </p>
                     </a>
                 </li>
@@ -55,10 +55,10 @@
                     <a href="/petugas/create" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Form Petugas
+                            
                         </p>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
